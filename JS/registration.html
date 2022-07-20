@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script>
+            var reg = [];
+            function add(data){
+                reg+=" ";
+                reg+=data;
+                document.getElementById("out").value = reg;
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="id" name="id">
+        <input type="button" id="register" value="Register" onclick="add(document.getElementById('id').value)">
+        <br>
+        <output id="out"></output>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function findGrade(){
+                var m = document.getElementById("maths").value;
+                var e = document.getElementById("english").value;
+                var s = document.getElementById("science").value;
+
+                var avg = (parseInt(m) + parseInt(e) + parseInt(s))/3;
+
+                if(avg < 50){
+                    alert("Below Average");
+                }
+                else if(avg === 50){
+                    alert("Average");
+                }
+                else{
+                    alert("Above average");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p>ENTER MARKS : </p>
+        <form>
+            <p>Maths: <input type="number" id="maths" name="maths"></p>
+            <p>English: <input type="number" id="english" name="english"></p>
+            <p>Science: <input type="number" id="science" name="science"></p>
+            <button type="submit" onclick="findGrade();">Find Grade</button>
+        </form>
+        
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <script>
+            var eqn="";
+            function displayVal(id){
+                var val = document.getElementById(id).value;
+                eqn+=val;
+                document.getElementById("screen").value = eqn;
+            }
+
+            function ans(){
+                var a = eval(eqn);
+                eqn = a;
+                document.getElementById("screen").value = a;
+            }
+
+            function clr(){
+                eqn.clear();
+                var a = eval(eqn);
+                document.getElementById("screen").value = a;
+            }
+
+            window.onerror = function () {
+                alert("Invalid Expression");
+            };
+        </script>
+
+    </head>
+    <body>
+        <form id="form1">
+            <input type="text" id="screen">
+            <table>
+                <td>
+                    <input type="button" value="1" id="one" onclick="displayVal(this.id)">
+                </td>
+                <td>
+                    <input type="button" value="2" id="two" onclick="displayVal(this.id)">
+                </td>
+                <td>
+                    <input type="button" value="+" id="plus" onclick="displayVal(this.id)">
+                </td>
+                <td>
+                    <input type="button" value="=" id="equal" onclick="ans()">
+                </td>
+                <td>
+                    <input type="button" value="C" onclick="clr()">
+                </td>
+                <td>
+                    <input type="button" value="/" id="divide" onclick="displayVal(this.id)">
+                </td>
+                <td>
+                    <input type="button" value="*" id="multiply" onclick="displayVal(this.id)">
+                </td>
+
+            </table>
+        </form>
+    </body>
+</html>
