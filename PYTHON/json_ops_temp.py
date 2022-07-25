@@ -43,7 +43,7 @@ def patient_section():
 
 
 def add_patient():
-    with open("resources/patient_data.json")
+    a=0
 
 
 def delete_data():
