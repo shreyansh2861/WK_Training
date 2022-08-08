@@ -1,0 +1,11 @@
+<multi_cat>
+    <table xmlns="http://mydb.com/names">
+        <cols/>
+        <rows/>
+    </table>
+    <fs:table xmlns:fs="https://myfurniturestore.com">
+        <fs:material/>
+        <fs:numlegs/>
+        <fs:color/>
+    </fs:table>
+</multi_cat>
