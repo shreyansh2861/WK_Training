@@ -24,9 +24,15 @@ function process_emp(emp_lis, calcAge){
     const ages = [];
     curr_yr1=2022
     for(emp in emp_lis){
-        ages.push[calcAge(emp,curr_yr1)];
+        ages.push(calcAge(emp,curr_yr1));
     }
     return ages;
 }
 
 console.log(process_emp([1997,1998,2003,1978], calcAge));
+
+student.displaySelf = function (){
+    console.log(this);
+};
+
+student.displaySelf();
