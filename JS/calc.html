@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+        </style>
         
         <script>
             var eqn="";
@@ -17,9 +19,8 @@
             }
 
             function clr(){
-                eqn.clear();
-                var a = eval(eqn);
-                document.getElementById("screen").value = a;
+                eqn = "";
+                document.getElementById("screen").value = eqn;
             }
 
             window.onerror = function () {
@@ -31,8 +32,8 @@
     <body>
         <form id="form1">
             <input type="text" id="screen">
-            <table>
-                <td>
+            <table id="table">
+                <tr><td>
                     <input type="button" value="1" id="one" onclick="displayVal(this.id)">
                 </td>
                 <td>
@@ -40,43 +41,57 @@
                 </td>
                 <td>
                     <input type="button" value="3" id="three" onclick="displayVal(this.id)">
-                </td>
-                <td>
-                    <input type="button" value="4" id="four" onclick="displayVal(this.id)">
-                </td>
-                <td>
-                    <input type="button" value="5" id="five" onclick="displayVal(this.id)">
-                </td>
-                <td>
-                    <input type="button" value="6" id="six" onclick="displayVal(this.id)">
-                </td>
-                <td>
-                    <input type="button" value="7" id="seven" onclick="displayVal(this.id)">
-                </td>
-                <td>
-                    <input type="button" value="8" id="eight" onclick="displayVal(this.id)">
-                </td>
-                <td>
-                    <input type="button" value="9" id="nine" onclick="displayVal(this.id)">
-                </td>
-                <td>
-                    <input type="button" value="0" id="zero" onclick="displayVal(this.id)">
-                </td>
-                <td>
-                    <input type="button" value="+" id="plus" onclick="displayVal(this.id)">
-                </td>
-                <td>
-                    <input type="button" value="=" id="equal" onclick="ans()">
-                </td>
-                <td>
-                    <input type="button" value="C" onclick="clr()">
-                </td>
-                <td>
-                    <input type="button" value="/" id="divide" onclick="displayVal(this.id)">
-                </td>
-                <td>
-                    <input type="button" value="*" id="multiply" onclick="displayVal(this.id)">
-                </td>
+                </td></tr>
+                <tr>
+                    <td>
+                        <input type="button" value="4" id="four" onclick="displayVal(this.id)">
+                    </td>
+                    <td>
+                        <input type="button" value="5" id="five" onclick="displayVal(this.id)">
+                    </td>
+                    <td>
+                        <input type="button" value="6" id="six" onclick="displayVal(this.id)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="7" id="seven" onclick="displayVal(this.id)">
+                    </td>
+                    <td>
+                        <input type="button" value="8" id="eight" onclick="displayVal(this.id)">
+                    </td>
+                    <td>
+                        <input type="button" value="9" id="nine" onclick="displayVal(this.id)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="0" id="zero" onclick="displayVal(this.id)">
+                    </td>
+                    <td>
+                        <input type="button" value="+" id="plus" onclick="displayVal(this.id)">
+                    </td>
+                    <td>
+                        <input type="button" value="-" id="minus" onclick="displayVal(this.id)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="*" id="multiply" onclick="displayVal(this.id)">
+                    </td>
+                    <td>
+                        <input type="button" value="/" id="divide" onclick="displayVal(this.id)">
+                    </td>
+                    <td>
+                        <input type="button" value="=" id="equal" onclick="ans()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="C" onclick="clr()">
+                    </td>
+                </tr>
+                
 
             </table>
         </form>

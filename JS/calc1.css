@@ -1,0 +1,11 @@
+table {
+    width: 20%;
+    box-shadow: 5px 10px #888888;
+    border: 2px solid;
+  }
+  input[type="text"] {
+    width: 100%;
+  }
+  input[type="button"] {
+    width: 100%;
+  }

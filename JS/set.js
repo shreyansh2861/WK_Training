@@ -17,6 +17,6 @@ let itr = set.values();
 
 //console.log(itr.next().value);
 itr.next();
-while(itr!=undefined){
-    console.log(itr.next().value);
-}
+// while(itr!=undefined){
+//     console.log(itr.next().value);
+// }
