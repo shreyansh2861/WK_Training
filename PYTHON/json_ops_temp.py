@@ -42,13 +42,76 @@ def patient_section():
         main_menu()
 
 
+def append_data(x):
+    with open("resources/patient_data.json", 'a') as file_handle:
+        file_handle.write(",")
+        file_handle.write(json.dumps(x))
+        file_handle.close()
+
+
 def add_patient():
-    a=0
+    print("patient_id : ")
+    patient_id = int(input())
+    print("First Name : ")
+    firstName = str(input())
+    print("Last Name : ")
+    lastName = str(input())
+
+    print("Gender : ")
+    gender = str(input())
+
+    print("Age : ")
+    age = int(input())
+
+    print("Enter Address : ")
+    print("Street : ")
+    street = str(input())
+    print("City : ")
+    city = str(input())
+    print("State : ")
+    state = str(input())
+
+    print("Phone number : ")
+    phno = int(input())
+    print("Phone Type : ")
+    type = str(input())
+
+    x = {
+        "patient_id": patient_id,
+        "firstName": firstName,
+        "lastName": lastName,
+        "gender": gender,
+        "age": age,
+        "address": {
+            "street": street,
+            "city": city,
+            "state": state
+        },
+        "phoneNumbers": [
+            {
+                "type": type,
+                "number": phno
+            }
+        ]
+    }
+
+    patient_data["patient_list"].append(x)
+
+    save_data(patient_data)
+
 
 
 def delete_data():
     print("Enter Id to be deleted : ")
     choice = int(input())
+    pd = {"patient_list": []}
+    for i in patient_data["patient_list"]:
+        if i["patient_id"] != choice:
+            pd["patient_list"].append(i);
+
+    with open("resources/patient_data.json", 'w') as file_handle:
+        json.dump(pd,file_handle);
+    load_data()
 
 
 

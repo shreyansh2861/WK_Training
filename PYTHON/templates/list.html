@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <table border = 1>
+         <thead>
+            <td>Patient Id</td>
+            <td>FirstName</td>
+            <td>LastName</td>
+            <td>Gender</td>
+            <td>Age</td>
+            <td>Mobile Number</td>
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+                <td>{{row["patientID"}}</td>
+               <td>{{row["firstName"]}}</td>
+               <td>{{row["lastName"]}}</td>
+               <td>{{row["gender"]}}</td>
+               <td> {{row["age"]}}</td>
+               <td>{{row["phNO"]}}</td>
+            </tr>
+         {% end-for %}
+      </table>
+
+      <a href = "/">Go back to home page</a>
+</body>
+</html>
