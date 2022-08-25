@@ -9,7 +9,7 @@ patient_data = load_data()
 def main_menu():
     a = True
     while True:
-        print("Select From the following : \n 1. Patient Section \n 2. Appointment Section \n 3. Exit")
+        print("Select From the following : \n 1. Patient Section \n 3. Exit")
 
         choice = int(input())
 
