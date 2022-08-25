@@ -108,9 +108,9 @@ def delete_data():
     for i in patient_data["patient_list"]:
         if i["patient_id"] != choice:
             pd["patient_list"].append(i);
-
-    with open("resources/patient_data.json", 'w') as file_handle:
-        json.dump(pd,file_handle);
+    save_data(pd)
+    # with open("resources/patient_data.json", 'w') as file_handle:
+    #     json.dump(pd,file_handle);
     load_data()
 
 
@@ -144,7 +144,7 @@ def save_data(pdata):
 
 main_menu()
 
-patient_data = load_data()
+# patient_data = load_data()
 """
 
 print(patient_data)
